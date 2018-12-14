@@ -11,4 +11,4 @@ with following stacks
 ## Features
  #### sign up, sign in are working but email verification is not working,thats for password reset also not workin
  #### tweet ,reply tweet working but media upload and poll in tweets are not working
- #### like tweet is just a client side,clicking like button increment and decrement on client but actually just increments on data
+ #### like tweet is just client side,clicking like button show increment and decrement on client but actually just increments on database
