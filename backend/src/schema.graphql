@@ -1,0 +1,45 @@
+#import * from "./generated/prisma.graphql";
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  bio: String
+  coverImgUrl: String
+  profileImgUrl: String
+  createdAt:DateTime
+  location: String
+  website: String
+  tweets: [Tweet!]
+  followersCount:Int
+  followingCount:Int
+  followers: [User!]
+  following: [User!]
+}
+
+type Query {
+  user: User
+  me: User
+  feed:TweetConnection
+  thisUserQuery(id:ID):User
+  thisUserTweets(id:ID):TweetConnection
+  toFollow:UserConnection
+  following:User
+  followers:User
+  tweetReplies(id:ID!):Tweet
+  tweetDetailsAndReplies(id:ID!):Tweet
+}
+type Mutation {
+  createTweet(text: String!): Tweet
+  replyTweet(text:String!,replyingToTweetId:ID!):Tweet
+  likeTweet(tweetId: ID!): SuccessMessage
+  comment(parentTweetId: ID!, userID: ID!, id: ID!): Tweet
+  signup(email: String!, name: String!, password: String!):User
+  updateUser(data: UserUpdateInput!): User
+  follow(whoToFollow: ID!): User
+  login(email: String!, password: String!): User
+  logout: SuccessMessage
+}
+
+type SuccessMessage {
+  successMessage: String
+}

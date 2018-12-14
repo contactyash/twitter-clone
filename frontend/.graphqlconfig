@@ -1,0 +1,8 @@
+{
+
+  "extensions": {
+    "endpoints": {
+      "dev": "https://localhost:4000"
+    }
+  }
+}

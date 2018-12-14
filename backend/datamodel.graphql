@@ -1,0 +1,23 @@
+type User {
+  id: ID! @unique
+  name: String!
+  password: String!
+  email: String! @unique
+  bio: String
+  coverImgUrl: String
+  profileImgUrl: String
+  location: String
+  website: String
+  createdAt:DateTime!
+  tweets: [Tweet!]!
+  followers: [User!]! @relation(name: "UsersFollowers")
+  following: [User!]! @relation(name: "UsersFollowing")
+}
+type Tweet {
+  id: ID! @unique
+  tweetedBy: User
+  text: String!
+  createdAt:DateTime!
+  likeCounter: Int
+  comments: [Tweet!]!
+}

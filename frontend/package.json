@@ -1,0 +1,41 @@
+{
+  "name": "twitter-clone",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.18",
+    "apollo-link": "^1.2.3",
+    "apollo-link-context": "^1.0.9",
+    "apollo-link-state": "^0.4.2",
+    "apollo-link-ws": "^1.0.9",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
+    "graphql": "^14.0.2",
+    "moment": "^2.23.0",
+    "path": "^0.12.7",
+    "react": "^16.7.0-alpha.0",
+    "react-apollo": "^2.2.4",
+    "react-dom": "^16.7.0-alpha.0",
+    "react-fast-compare": "^2.0.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5",
+    "styled-components": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "dev": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
